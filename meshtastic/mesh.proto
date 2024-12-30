@@ -1279,6 +1279,11 @@ message MeshPacket {
    * Set by the firmware internally, clients are not supposed to set this.
    */
   uint32 tx_after = 20;
+
+  /*
+   * A bloom filter storing the top 20 nodes for each hop using 2 hashes
+   */
+  bytes coverage_filter = 21;
 }
 
 /*
