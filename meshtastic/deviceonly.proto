@@ -95,6 +95,18 @@ message UserLite {
   bytes public_key = 7;
 }
 
+message RelayNode {
+  /*
+   * The node number
+   */
+  uint32 num = 1;
+
+  /*
+   * Set to indicate the last time we received a packet from this node
+   */
+  fixed32 last_heard = 2;
+}
+
 message NodeInfoLite {
   /*
    * The node number
@@ -158,11 +170,6 @@ message NodeInfoLite {
    * Last byte of the node number of the node that should be used as the next hop to reach this node. 
    */
   uint32 next_hop = 12;
-
-  /*
-   * Node number of the node that relayed this packet.
-   */
-  uint32 relay_node = 13;
 }
 
 /*
