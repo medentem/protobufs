@@ -237,6 +237,11 @@ message DeviceState {
    * New lite version of NodeDB to decrease memory footprint
    */
   repeated NodeInfoLite node_db_lite = 14 [(nanopb).callback_datatype = "std::vector<meshtastic_NodeInfoLite>"];
+
+  /*
+   * New coverage tracking vector
+   */
+  repeated RelayNode relay_db = 15 [(nanopb).callback_datatype = "std::vector<meshtastic_RelayNode>"];
 }
 
 /*
